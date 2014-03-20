@@ -32,10 +32,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.scss" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/styles/main.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="6" selection-start="238" selection-end="238" vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="1649">
+            <state line="3" column="17" selection-start="99" selection-end="99" vertical-scroll-proportion="0.049707603" vertical-offset="0" max-vertical-offset="1683">
               <folding />
             </state>
           </provider>
@@ -44,7 +44,7 @@
       <file leaf-file-name="package.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="1" selection-start="1182" selection-end="1182" vertical-scroll-proportion="-26.807692" vertical-offset="0" max-vertical-offset="816">
+            <state line="46" column="1" selection-start="1315" selection-end="1315" vertical-scroll-proportion="-26.807692" vertical-offset="85" max-vertical-offset="901">
               <folding />
             </state>
           </provider>
@@ -61,10 +61,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bower.json" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="bower.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bower.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="424" selection-end="424" vertical-scroll-proportion="0.3148148" vertical-offset="0" max-vertical-offset="1026">
+            <state line="19" column="0" selection-start="424" selection-end="424" vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="425">
               <folding />
             </state>
           </provider>
@@ -87,8 +87,8 @@
         <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/views/main.html" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/app/styles/main.scss" />
         <option value="$PROJECT_DIR$/bower.json" />
+        <option value="$PROJECT_DIR$/app/styles/main.scss" />
       </list>
     </option>
   </component>
@@ -175,28 +175,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="styles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="portfolio2014" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="portfolio2014" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bower_components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sass-bootstrap" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -348,7 +326,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="1" selection-start="1182" selection-end="1182" vertical-scroll-proportion="-26.807692" vertical-offset="0" max-vertical-offset="816">
+        <state line="46" column="1" selection-start="1315" selection-end="1315" vertical-scroll-proportion="-26.807692" vertical-offset="85" max-vertical-offset="901">
           <folding />
         </state>
       </provider>
@@ -397,13 +375,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="6" selection-start="238" selection-end="238" vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="1649">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="15" selection-start="961" selection-end="961" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7004">
@@ -413,7 +384,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bower.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="424" selection-end="424" vertical-scroll-proportion="0.3148148" vertical-offset="0" max-vertical-offset="1026">
+        <state line="19" column="0" selection-start="424" selection-end="424" vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="425">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="17" selection-start="99" selection-end="99" vertical-scroll-proportion="0.049707603" vertical-offset="0" max-vertical-offset="1683">
           <folding />
         </state>
       </provider>

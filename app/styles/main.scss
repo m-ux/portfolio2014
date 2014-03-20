@@ -1,5 +1,7 @@
 $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
+@import 'variables';
+@import 'mixins';
 @import 'sass-bootstrap/lib/bootstrap';
 
 .browsehappy {
