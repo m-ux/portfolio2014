@@ -1,8 +1,8 @@
 <!doctype html>
-<!--[if lt IE 8]>      <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if IE 9]>         <html class="no-js ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if lt IE 8]>      <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,59 +22,42 @@
     <!-- @font-face | google fonts inclusion
     <!-- ===================================
     <!-- font-family: 'Montserrat', sans-serif;  // 14 kb
-  4	<!-- font-family: 'Raleway', sans-serif;     // 59 kb
-  5	<!-- font-family: 'Lusitana', serif;         // 16 kb -->
+    <!-- font-family: 'Raleway', sans-serif;     // 59 kb
+    <!-- font-family: 'Lusitana', serif;         // 16 kb -->
     <link href='http://fonts.googleapis.com/css?family=Montserrat:700|Raleway:100|Lusitana' rel='stylesheet' type='text/css'>
   </head>
 
-  <body ng-app="portfolio2014App"><div ng-controller="RootCtrl">
+  <body ng-app="portfolio2014App" ng-controller="RootCtrl">
     <!--[if lt IE 8]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
 
 
-
+    <header id="site-header" ng-class="menuFlag" role="banner">
+      <a id="menu-ctrl" title="menu" ng-click="toggleMenu()">
+        <i class="fa fa-bars"></i></a>
+      <h1><a href="#">Michael Patten.ca</a></h1>
+      <aside ng-include="templates.social"></aside>
+    </header>
 
     <!-- Begin main site content -->
-    <nav role="navigation">
-      <ul ng-controller="NavCtrl">
-        <li ng-repeat="page in pages">
-          <a href="{{ page.url }}">{{ page.name }}</a>
-        </li>
-      </ul>
-    </nav>
+    <nav role="navigation" ng-include="templates.navigation"></nav>
 
-    <div id="root" class="full container" ng-class="navClass">
-      <header id="site-header" role="banner">
-        <a id="menu-ctrl" title="menu" ng-click="toggleMenu()">
-            <i class="fa fa-bars"></i>
-        </a>
-        <h1><a href="#">Michael Patten</a></h1>
-
-        <aside ng-controller="SocialCtrl">
-          <ul>
-            <li ng-repeat="network in socialNetworks">
-              <a title="{{ network.name }}" href="{{ network.url }}">
-                <i class="fa fa-{{ network.icon }}"></i>
-              </a>
-            </li>
-          </ul>
-        </aside>
-      </header>
-
-      <div ng-view id="site-main" class="row clearfix" role="main"></div>
-
-      <footer id="site-footer" role="contentinfo">
-
-      </footer>
+    <div id="root" ng-class="menuFlag">
+      <section id="headline"    ng-include="templates.headline"  ng-controller="HeadlineCtrl"></section>
+      <div class="container">
+        <section id="about"     ng-include="templates.about"     ng-controller="AboutCtrl"></section>
+        <section id="skills"    ng-include="templates.skills"    ng-controller="SkillsCtrl"></section>
+        <section id="portfolio" ng-include="templates.portfolio" ng-controller="PortfolioCtrl"></section>
+        <footer role="contentinfo"></footer>
+      </div>
     </div>
 
 
 
 
 
-    <!-- Script includes -->
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -100,15 +83,21 @@
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-scroll/angular-scroll.js"></script>
+    <script src="bower_components/ng-parallax/angular-parallax.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
-    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/root.js"></script>
     <script src="scripts/controllers/nav.js"></script>
     <script src="scripts/controllers/social.js"></script>
-    <script src="scripts/controllers/root.js"></script>
+    <script src="scripts/controllers/headline.js"></script>
+    <script src="scripts/controllers/about.js"></script>
+    <script src="scripts/controllers/skills.js"></script>
+    <script src="scripts/controllers/portfolio.js"></script>
     <!-- endbuild -->
-  </div></body>
+  </body>
 </html>
+

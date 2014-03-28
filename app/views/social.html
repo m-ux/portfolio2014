@@ -1,0 +1,7 @@
+<ul ng-controller="SocialCtrl" >
+  <li ng-repeat="network in socialNetworks">
+    <a title="{{ network.name }}" href="{{ network.url }}">
+      <i class="fa fa-{{ network.icon }}"></i>
+    </a>
+  </li>
+</ul>

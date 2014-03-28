@@ -5,7 +5,7 @@ describe('Controller: SocialCtrl', function () {
   // load the controller's module
   beforeEach(module('portfolio2014App'));
 
-  var SocialCtrl,i,scope,length;
+  var SocialCtrl,i,scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
@@ -22,7 +22,7 @@ describe('Controller: SocialCtrl', function () {
 
     describe('a social network account', function(){
       it('should include a name, a url and an icon property', function(){
-        for(i = 0; i < length; i++){
+        for(i = 0; i < scope.socialNetworks.length; i++){
           expect(typeof scope.pages[i].name).toBeDefined();
           expect(typeof scope.pages[i].url).toBeDefined();
           expect(typeof scope.pages[i].icon).toBeDefined();

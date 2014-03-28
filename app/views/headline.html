@@ -1,8 +1,14 @@
+<!-- Background Video -->
+<video autoplay="autoplay" class="masthead-video" loop="loop" poster="{{ poster }}">
+  <source ng-repeat="video in videos" src="{{ video.src }}">
+</video>
+<div class="overlay"></div>
 
-<section class="headline">
+<!-- Foreground Content -->
+<div class="text-wrap">
   <h1>Michael Patten</h1>
   <span>User Experience</span>
-  <span class="middle">Responsive Design</span>
+  <span>Responsive Design</span>
   <span>Interaction & UI Development</span>
   <br>
   <p>
@@ -11,4 +17,4 @@
     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
     nisi ut aliquip ex ea commodo consequat.
   </p>
-</section>
+</div>
