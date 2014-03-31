@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
@@ -46,11 +46,18 @@
 
     <div id="root" ng-class="menuFlag">
       <section id="headline"    ng-include="templates.headline"  ng-controller="HeadlineCtrl"></section>
-      <div class="container">
-        <section id="about"     ng-include="templates.about"     ng-controller="AboutCtrl"></section>
-        <section id="skills"    ng-include="templates.skills"    ng-controller="SkillsCtrl"></section>
-        <section id="portfolio" ng-include="templates.portfolio" ng-controller="PortfolioCtrl"></section>
-        <footer role="contentinfo"></footer>
+      <div class="wrap">
+        <div class="container">
+          <section id="focus"     ng-include="templates.focus"     ng-controller="FocusCtrl"></section>
+          <section id="skills"    ng-include="templates.skills"    ng-controller="SkillsCtrl"></section>
+        </div>
+      </div>
+      <section id="portfolio" ng-include="templates.portfolio" ng-controller="PortfolioCtrl"></section>
+      <div class="wrap">
+        <div class="container">
+          <section id="about"     ng-include="templates.about"     ng-controller="AboutCtrl"></section>
+          <footer role="contentinfo"></footer>
+        </div>
       </div>
     </div>
 
@@ -82,9 +89,9 @@
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="bower_components/angular-scroll/angular-scroll.js"></script>
-    <script src="bower_components/ng-parallax/angular-parallax.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-scroll/angular-scroll.min.js"></script>
+    <script src="bower_components/ng-parallax/angular-parallax.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -97,6 +104,7 @@
     <script src="scripts/controllers/about.js"></script>
     <script src="scripts/controllers/skills.js"></script>
     <script src="scripts/controllers/portfolio.js"></script>
+    <script src="scripts/controllers/focus.js"></script>
     <!-- endbuild -->
   </body>
 </html>

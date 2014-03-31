@@ -1,1 +1,13 @@
-<p>This is the skills view.</p>
+<h1><span>Skillset</span></h1>
+<div class="row">
+    <div ng-repeat="skill in skills" class="skill col-xs-12 col-sm-4 col-md-3 {{ skill.classmod }}">
+        <h4>{{ skill.name }}</h4>
+        <div class="progress">
+            <div class="progress-bar" style="width:{{ skill.value * 10 }}%; background-color:HSLA({{-70 + (skill.value * 20)}},100%,65%,0.58)"
+                 role="progressbar" aria-valuenow="{{skill.value}}" aria-valuemin="0" aria-valuemax="10"></div>
+            <span class="sr-only">{{skill.value}} of 10</span>
+        </div>
+        <em class="hidden-xs">{{skill.description}}</em>
+    </div>
+</div>
+<br>

@@ -11,36 +11,82 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
 @import "font-awesome/scss/font-awesome";
 
 // Common elements
-h1 { font-family: 'Montserrat'; font-size:48px; text-transform: uppercase; letter-spacing: 0.4em; }
+h1,h2,h3,h4,h5,h6 { font-family: 'Montserrat'; margin-top:0; }
+span              { font-family: 'Raleway'; }
+p                 { font-family: 'Lusitana'; font-size: 20px; line-height: 1.67; color:#888; margin-bottom:30px; }
+
+h1 {
+  font-size:42px; text-transform: uppercase; border-bottom:1px solid #5a5a5a;
+  margin:30px 0 32px; padding-bottom:10px;
+}
+h1 span { letter-spacing: 0.12em; line-height:1.2; }
+h2 i { color:#aaa; font-size:0.8em; }
+em { color:#666; }
+
+
+.skill { margin-bottom: 20px;
+  .progress {
+    background: #404040; margin-bottom: 10px; @include box-shadow(0 -1px 2px RGBA(0, 0, 0, 0.25));
+    .progress-bar { opacity: 0.67; }
+  }
+  em { height: 20px; }
+}
+
+@media (max-width: $screen-xs-max){
+  .skill { margin-bottom:5px; }
+}
+
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+  em { font-size:12px; }
+}
+
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max){
+  em { font-size:11px; font-style: normal; }
+}
+
 
 a  {
   color: #e6e6e6; @include transition(all 180ms ease-in);
   &:hover { color: #fff; text-decoration: none; opacity: 1; }
 }
 
-.full.container { width:100%; }
+@media (max-width: $screen-md-max){
+  h2 {font-size:21px;} p{font-size:18px;}
+}
+@media (max-width: $screen-sm-max){
+  h1 {font-size:30px;}
+}
+
+@media (max-width: 321px){
+  h2 {font-size:20px;} p{font-size:16px;}
+}
+
+.wrap {
+  position: relative; top: -10px; z-index: 50; width:100%;
+  background: #333; @include box-shadow(0px -1px 12px RGBA(0,0,0,0.5));
+}
 
 
-body { background: #2c2c2c; overflow-x: hidden; }
+body { background: #262626; overflow-x: hidden; width:100%; max-width: 100%; }
 
 body > nav {
-  position: fixed; top: 0; left: 0; width: 240px; background: #333; overflow:hidden;
+  position: fixed; top: 0; left: 0; width: 240px; background: #2B2B2B; overflow:hidden;
 
   header {
     height: 80px; overflow:hidden;
     font-family:'Montserrat'; font-size: 20px; text-transform: uppercase;
     line-height: 0.9; letter-spacing: 0.15em; padding:15px 10px 10px; margin-bottom:5px;
-    color: RGBA(255,255,255,0.5); background: #3d3d3d; border-bottom: #111;
+    background: #393939; border-bottom: #111;
   }
   ul { list-style-type: none; padding:0; margin:0; }
   li {
     font-family:'montserrat'; font-size: 16px; text-transform: uppercase;
-    border-bottom:1px solid #3a3a3a;border-top:1px solid #2a2a2a;
+    border-bottom:1px solid #333;border-top:1px solid #262626;
     a {
       display: block; padding: 11px 15px 9px; letter-spacing: 0.05em;
-      border-left: 6px solid #2d2d2d; opacity: 0.75;
+      border-left: 6px solid #232323; opacity: 0.75;
 
-      &:hover { opacity:0.85; background:#3a3a3a; border-color:RGBA(0,255,185,0.5); }
+      &:hover { opacity:0.85; background:#363636; border-color:RGBA(0,255,185,0.5); }
     }
   }
   .fa { display:inline-block; width: 16px; margin-right: 10px; text-align: center; }
@@ -50,11 +96,12 @@ body > nav {
 
 #site-header {
   position:fixed; top:0; left:0; z-index:100; width:100%;
+  //border-bottom:1px solid RGBA(255,255,255,0.1);background:RGBA(60,60,60,0.5);
   @include transform(translate3d(0, 0, 0));
   @include transition(all 360ms ease-in-out);
   &.menu-open { @include transform(translate3d(240px, 0, 0)); }
 
-  h1 { width:480px; margin:13px 0 13px 47px; font-size:24px; letter-spacing: 0.2em; }
+  h1 { width:480px; margin:13px 0 3px 47px; font-size:24px; letter-spacing: 0.2em; border:none; }
   sub { bottom:0; }
 
   #menu-ctrl {
@@ -85,35 +132,36 @@ body > nav {
 
 // Page-wrap (req for off canvas menu)
 #root  {
-  position: absolute; top: 0; left: 0; width:100%; background: #666; z-index:10;
+  position: absolute; top: 0; left: 0; width:100%; background: #3a3a3a; z-index:10; color:#aaa;
+  overflow:hidden; max-width:100%;
   @include box-shadow(-5px 0 24px RGBA(0, 0, 0, 0.5));
   @include transform(translate3d(0, 0, 0));
   @include transition(all 360ms ease-in-out);
-  &.menu-open { @include transform(translate3d(240px, 0, 0)); }
+  &.menu-open { @include transform(translate3d(240px, 0, 0)); max-width:100%; overflow:hidden; }
 
   video { width:100%; max-width:100%; z-index:11; }
   .overlay {
     position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 15;
-    background: rgba(50,50,50,0.8);
+    background:#333;opacity:0.75;
   }
 
 }
 
-#headline {
+#headline { position:relative;
+
   .text-wrap {
     width:780px;overflow:hidden; position:absolute; left:10%; top:50%; margin-top:-128px; z-index:20;
     h1 {
-      width: 880px; color:RGBA(255,255,255,0.47); position:relative; left: -3px; font-size: 55px;
-      border-bottom: 1px solid RGBA(255,255,255,0.13); padding-bottom: 5px; margin-bottom: 12px;
+      position:relative; left: -3px; padding-bottom: 5px; margin-bottom: 12px; width: 880px;
+      font-size: 55px; letter-spacing: 0.4em;
+      color:RGBA(255,255,255,0.47); border-bottom: 1px solid RGBA(255,255,255,0.13);
     }
     span {
-      font-family: 'Raleway'; text-transform: uppercase; color: RGBA(255,255,255,0.8);
+      font-family: 'Raleway'; text-transform: uppercase; color: RGBA(255,255,255,0.9);
       font-size: 17px; letter-spacing: 0.1em;
       &:nth-child(3) { padding: 0 28px; }
     }
-    p {
-      font-family:'Lusitana'; font-size:20px; color: RGBA(222,222,222,0.67);
-      margin-top:20px; line-height: 1.67
-    }
+    p { font-family:'Lusitana'; font-size:20px; color: RGBA(222,222,222,0.67); margin-top:20px; }
   }
+
 }

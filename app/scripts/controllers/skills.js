@@ -2,30 +2,18 @@
 
 angular.module('portfolio2014App')
   .controller('SkillsCtrl', function ($scope) {
-    $scope.skillList = [
-      { section: 'User Experience', skills: [
-        { name: 'Research & Analysis', value: '70', description: 'user testing, user interviews, heuristics, justifications' },
-        { name: 'Information Architecture', value: '80', description: 'wireframing, sitemapping, ' },
-        { name: 'User Centered Design', value: '75', description:'personas, storyboarding, scenarios' },
-        { name: 'Lean UX', value: '90', description:'brainstorming, prototyping, iteration, collaboration' }
-      ]},
-      { groupname: 'Responsive Design', skills: [
-        { name: 'General Design', value: '80', description:'composition, color, typography, art direction, photoshop/illustrator'},
-        { name: 'Responsive Layout/U.I.', value: '90', description:'media queries, device orientation, content reflows, '},
-        { name: 'Bootstrap/Foundation', value: '85', description:'grids, ui components, forms, validation' },
-        { name: 'LESS/SASS', value: '80', description:'variables, calculations, mixins' }
-      ]},
-      { groupname: 'Interaction & UI Development', skills: [
-        { name: 'HTML5/CSS3', value: '90', description:'core HTML/CSS, semantics, transitions, transformations, localstorage, audio/video, geolocation, canvas'},
-        { name: 'Javascript', value: '90', description:'prototypal inheritance, design patterns, event handling, DOM manipulation, ajax, CommonJS/AMD'},
-        { name: 'MV* Frameworks', value: '80', description:'angular.js, backbone.js, REST, data modelling, application design' },
-        { name: 'Node.js', value: '70', description:'' }
-      ]},
-      { groupname: 'Auxiliary Development', skills: [
-        { name: 'Unit Testing (Javascript)', value: '70', description:'BDD/TDD, Jasmine/Karma'},
-        { name: 'Version Control', value: '80', description:'GIT/Mercurial/SVN'},
-        { name: 'Agile Methodologies', value: '90', description:'defining features, writing user stories, task planning/sprint planning, estimation, product backlogs, iterative development, JIRA, Rally, Trac & YouTrack' },
-        { name: 'Automation/Build', value: '70', description:'Node.js - Yeoman/Bower/Grunt, jsHint, imgMin, svgMin, uglifyjs' }
-      ]}
+    $scope.skills = [
+      { name: 'Information Architecture', value: '7.0', description: 'wireframing, sitemapping, specification', classmod: '' },
+      { name: 'User Centered Design', value: '8.0', description:'personas, storyboarding, scenarios', classmod: 'hidden-xs' },
+      { name: 'Lean UX', value: '9.0', description:'brainstorm, prototype, test, iterate', classmod: '' },
+      { name: 'Web Design', value: '8.0', description:'adobe cc, color, type, composition', classmod: '' },
+      { name: 'HTML5 CSS3', value: '9.0', description:'incl. bootstrap, foundation less/sass', classmod: ''},
+      { name: 'Javascript', value: '9.5', description:'prototypal, design patterns, rest/json', classmod: ''},
+      { name: 'Backbone.js', value: '9.0', description:'usually with marionette & require.js', classmod: 'hidden-xs' },
+      { name: 'Angular.js', value: '4.0', description:'pretty new to angular - still learning', classmod: 'hidden-xs' },
+      { name: 'Node.js', value: '7.0', description:'bower, grunt, yeoman, uglify, imgmin', classmod: 'hidden-xs' },
+      { name: 'Agile Methodologies', value: '9.0', description:'jira, rally, youtrack, trac / agilo', classmod: '' },
+      { name: 'Unit Testing (js)', value: '5.5', description:'bdd / tdd, jasmine / karma', classmod: 'hidden-xs' },
+      { name: 'Version Control', value: '8.0', description:'git, mercurial, svn', classmod: 'hidden-xs' }
     ];
   });

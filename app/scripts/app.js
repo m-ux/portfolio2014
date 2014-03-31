@@ -5,5 +5,3 @@ angular.module('portfolio2014App', [
   'ngResource',
   'ngSanitize'
 ]);
-
-
