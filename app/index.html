@@ -38,27 +38,31 @@
       <a id="menu-ctrl" title="menu" ng-click="toggleMenu()">
         <i class="fa fa-bars"></i></a>
       <h1><a href="#">Michael Patten.ca</a></h1>
-      <aside ng-include="templates.social"></aside>
+      <aside ng-include="templates.social" ng-controller="SocialCtrl"></aside>
     </header>
 
     <!-- Begin main site content -->
     <nav role="navigation" ng-include="templates.navigation"></nav>
 
     <div id="root" ng-class="menuFlag">
-      <section id="headline"    ng-include="templates.headline"  ng-controller="HeadlineCtrl"></section>
+      <section id="headline"      ng-include="templates.headline"  ng-controller="HeadlineCtrl"></section>
       <div class="wrap">
         <div class="container">
+          <aside id="social"      ng-include="templates.social"    ng-controller="SocialCtrl"></aside>
+          <br class="visible-xs">
           <section id="focus"     ng-include="templates.focus"     ng-controller="FocusCtrl"></section>
           <section id="skills"    ng-include="templates.skills"    ng-controller="SkillsCtrl"></section>
         </div>
+        <br>
       </div>
-      <section id="portfolio" ng-include="templates.portfolio" ng-controller="PortfolioCtrl"></section>
+      <section id="portfolio"     ng-include="templates.portfolio" ng-controller="PortfolioCtrl"></section>
       <div class="wrap">
         <div class="container">
+          <br>
           <section id="about"     ng-include="templates.about"     ng-controller="AboutCtrl"></section>
-          <footer role="contentinfo"></footer>
         </div>
       </div>
+      <footer role="contentinfo text-center">&copy; 2014 Michael Patten</footer>
     </div>
 
 
@@ -89,9 +93,11 @@
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-scroll/angular-scroll.js"></script>
+    <script src="bower_components/ng-parallax/angular-parallax.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
-    <script src="bower_components/angular-scroll/angular-scroll.min.js"></script>
-    <script src="bower_components/ng-parallax/angular-parallax.min.js"></script>
+    <script src="bower_components/angular-responsive-images/src/bh-responsive-images.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

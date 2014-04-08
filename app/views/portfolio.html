@@ -1,1 +1,14 @@
-<p>This is the portfolio view.</p>
+<div class="background" du-parallax y="background"></div>
+<div class="overlay"></div>
+
+<div class="container">
+    <br class="hidden-xs">
+    <h1><span>Portfolio</span></h1>
+    <p class="hidden-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+        do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        nisi ut aliquip ex ea commodo consequat.</p>
+    <article class="closed" ng-repeat="article in portfolio" id="article.id">
+        <img src="images/portfolio/thumb-{{article.id}}.jpg">
+    </article>
+</div>

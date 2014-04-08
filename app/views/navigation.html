@@ -3,6 +3,8 @@
 </header>
 <ul ng-controller="NavCtrl">
     <li ng-repeat="page in pages">
-        <a href="{{ page.url }}"><i class="fa fa-{{ page.icon }}"></i> {{ page.name }}</a>
+        <a href="#{{ page.url }}" ng-click="triggerScroll(page.url, 50, 4800)">
+            <i class="fa fa-{{ page.icon }}"></i> {{ page.name }}
+        </a>
     </li>
 </ul>

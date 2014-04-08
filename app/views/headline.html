@@ -1,5 +1,6 @@
 <!-- Background Video -->
-<video autoplay="autoplay" class="masthead-video" loop="loop" poster="{{ poster }}">
+<div class="background" du-parallax y="background"><img src="video/test-06.jpg"></div>
+<video autoplay="autoplay" class="masthead-video" loop="loop" poster="{{ poster }}" du-parallax y="background">
   <source ng-repeat="video in videos" src="{{ video.src }}">
 </video>
 <div class="overlay"></div>

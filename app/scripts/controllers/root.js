@@ -30,4 +30,8 @@ angular.module('portfolio2014App')
       this.menuFlag = this.menuOpen ? 'menu-open' : '';
     };
 
+    $scope.$on('toggleMenu', function(){
+      $scope.toggleMenu();
+    });
+
   });
